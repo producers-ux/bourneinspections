@@ -327,11 +327,10 @@
 
     /* Hero stats panel */
     .hero-stats {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: #FFFFFF;
+      border: 1px solid var(--border);
       border-radius: 8px;
       padding: 40px;
-      backdrop-filter: blur(8px);
     }
 
     .stat-grid {
@@ -362,7 +361,7 @@
     .stat-divider {
       grid-column: 1 / -1;
       height: 1px;
-      background: rgba(255,255,255,0.07);
+      background: var(--border);
     }
 
     .hero-badge {
@@ -371,7 +370,7 @@
       align-items: center;
       gap: 12px;
       padding-top: 24px;
-      border-top: 1px solid rgba(255,255,255,0.07);
+      border-top: 1px solid var(--border);
     }
 
     .hero-badge-icon {
@@ -389,13 +388,13 @@
 
     .hero-badge-text {
       font-size: 0.8rem;
-      color: #5A7EA8;
+      color: var(--warm-mid);
       line-height: 1.4;
     }
 
     .hero-badge-text strong {
       display: block;
-      color: var(--sand);
+      color: var(--charcoal);
       font-weight: 600;
     }
 
