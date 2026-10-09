@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ===================== PRIMARY SEO ===================== -->
-  <title>Bourne Inspections | Licensed Home & Commercial Inspector | Palm Springs, CA</title>
-  <meta name="description" content="Bourne Inspections provides thorough home, commercial, and investment property inspections across the Coachella Valley. Palm Springs, Palm Desert, Rancho Mirage, La Quinta, and surrounding areas." />
+  <title>Palm Springs Home Inspector | Bourne Inspections</title>
+  <meta name="description" content="Licensed Palm Springs home and commercial inspector. Fast reports, 7 days a week across the Coachella Valley. Book your inspection online." />
   <meta name="keywords" content="home inspector Palm Springs, home inspection Coachella Valley, commercial property inspection Palm Desert, pre-listing inspection, buyer home inspection, investment property inspection, Palm Springs home inspector, Rancho Mirage inspector, La Quinta home inspection" />
   <link rel="canonical" href="https://bourneinspections.com/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
 
   <!-- ===================== OPEN GRAPH ===================== -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Bourne Inspections | Licensed Home & Commercial Inspector | Palm Springs, CA" />
+  <meta property="og:title" content="Palm Springs Home Inspector | Bourne Inspections" />
   <meta property="og:description" content="Thorough, trusted property inspections across the Coachella Valley. Residential, commercial, and investor retainer services." />
   <meta property="og:url" content="https://bourneinspections.com" />
   <meta property="og:site_name" content="Bourne Inspections" />
   <meta property="og:image" content="https://bourneinspections.com/CJB.jpg" />
-  <meta property="og:image:alt" content="CJ Bourne, InterNACHI Certified Home Inspector — Bourne Inspections" />
+  <meta property="og:image:alt" content="CJ Bourne, InterNACHI Certified Home Inspector at Bourne Inspections" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Bourne Inspections | Palm Springs Home Inspector" />
   <meta name="twitter:description" content="Licensed property inspections for buyers, sellers, and investors across the Coachella Valley." />
@@ -31,7 +32,7 @@
     "name": "Bourne Inspections",
     "description": "Licensed home inspection and commercial property inspection services serving the Coachella Valley including Palm Springs, Palm Desert, Rancho Mirage, La Quinta, Desert Hot Springs, Cathedral City, and Indio.",
     "url": "https://bourneinspections.com",
-    "telephone": "+12537661101",
+    "telephone": "+17602824764",
     "email": "CJ@Bourneinspections.com",
     "image": "https://bourneinspections.com/CJB.jpg",
     "priceRange": "$$",
@@ -62,6 +63,79 @@
       "https://www.yelp.com/biz/bourne-inspections-palm-springs"
     ]
   }
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a home inspection take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard home inspection typically takes 2–4 hours depending on the size and age of the property. Larger homes, pools, and additional structures add time. Commercial properties vary. We never rush. Thoroughness is the standard, not the exception."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When will I receive my inspection report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reports are delivered digitally and fast, so your escrow stays on schedule. The report includes photos, descriptions, and items organized by priority so you can quickly identify what requires immediate attention versus what's routine maintenance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I be present during the inspection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You're always welcome to attend, and we encourage it. Being present allows you to see findings firsthand and ask questions in real time. That said, we understand schedules don't always allow it. The report is designed to be complete and clear on its own, and we're available by phone to walk you through anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a home inspection cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We inspect all accessible areas and systems: roof, foundation, structural components, electrical, plumbing, HVAC, water heater, attic, insulation, windows, doors, and exterior. Pool and spa inspections are available as an add-on. We follow InterNACHI (International Association of Certified Home Inspectors) standards of practice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you inspect pool and spa systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Pool and spa inspections are available as an add-on service. Given how common pools are in the Coachella Valley, we recommend adding this to any inspection where the property has a pool or spa. We evaluate equipment, plumbing, decking, safety features, and mechanical components."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a pre-listing inspection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A pre-listing inspection is done before you put your home on the market. It identifies issues that a buyer's inspector might find, giving you the opportunity to address them on your own terms and your own timeline. Sellers who complete pre-listing inspections experience fewer surprises, fewer re-negotiations, and faster closings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer services for real estate investors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer an investor retainer program designed for buyers who are acquiring properties regularly. This includes priority scheduling, consistent report formatting for lender use, and volume pricing. If you're building a portfolio in the Coachella Valley or high desert, contact us to discuss a program built around your needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I schedule an inspection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the contact form below, call us directly, or email. We respond quickly and accommodate short escrow windows. Once booked, we'll confirm all details with you and your agent."
+      }
+    }
+  ]
+}
   </script>
 
   <!-- ===================== FONTS ===================== -->
@@ -1436,6 +1510,16 @@
       body { padding-bottom: 80px; }
       footer { padding-bottom: 96px; }
     }
+
+    /* The hero renders on a light background (section:nth-child(even) overrides .hero),
+       so the Call Now button and subtext need dark text to be readable. */
+    .hero .btn-secondary { color: var(--charcoal); border-color: var(--slate); }
+    .hero .btn-secondary:hover { background: rgba(8,21,46,0.06); border-color: var(--charcoal); }
+    .hero-sub { color: var(--slate); }
+
+    /* Two-up review grid, stacks on tablet and phone */
+    .testimonials-grid.two { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 900px) { .testimonials-grid.two { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -1452,9 +1536,9 @@
         <a href="#faq">FAQ</a>
         <a href="#contact" class="nav-cta">Book Inspection</a>
       </div>
-      <a href="tel:+12537661101" class="nav-phone">
+      <a href="tel:+17602824764" class="nav-phone">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 4.9 19.79 19.79 0 0 1 1.27 4.18 2 2 0 0 1 1.18 2H4a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L5.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 19 16.92z"/></svg>
-        (253) 766-1101
+        (760) 282-4764
       </a>
       <div class="nav-toggle" id="nav-toggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -1466,15 +1550,15 @@
   <section class="hero" aria-label="Hero">
     <div class="hero-inner">
       <div class="hero-text">
-        <div class="hero-eyebrow">Palm Springs &amp; Coachella Valley</div>
+        <div class="hero-eyebrow">Palm Springs Home &amp; Commercial Inspector</div>
         <h1>It's a Great Day<br><em>in Palm Springs.</em></h1>
-        <p class="hero-sub">Let's make sure your next property is everything it should be. Thorough inspections. Same-day reports. No surprises.</p>
+        <p class="hero-sub">Let's make sure your next property is everything it should be. Thorough inspections. Fast reports. No surprises.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             Schedule Inspection
           </a>
-          <a href="tel:+12537661101" class="btn-secondary">
+          <a href="tel:+17602824764" class="btn-secondary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 4.9 19.79 19.79 0 0 1 1.27 4.18 2 2 0 0 1 1.18 2H4a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L5.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 19 16.92z"/></svg>
             Call Now
           </a>
@@ -1488,7 +1572,7 @@
             <div class="stat-label">Inspections Completed</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">24h</div>
+            <div class="stat-number">Fast</div>
             <div class="stat-label">Report Turnaround</div>
           </div>
           <div class="stat-divider"></div>
@@ -1504,8 +1588,8 @@
         <div class="hero-badge">
           <div class="hero-badge-icon">✓</div>
           <div class="hero-badge-text">
-            <strong>Same-day report delivery</strong>
-            Detailed digital report with photos delivered within hours of your inspection
+            <strong>Fast report delivery</strong>
+            Detailed digital report with photos, delivered fast so your deal keeps moving
           </div>
         </div>
       </div>
@@ -1518,7 +1602,7 @@
       <div class="trust-item"><span class="trust-icon">✓</span> CA &amp; WA Licensed Inspector</div>
       <div class="trust-item"><span class="trust-icon">✓</span> InterNACHI Certified</div>
       <div class="trust-item"><span class="trust-icon">✓</span> Fully Insured &amp; Bonded</div>
-      <div class="trust-item"><span class="trust-icon">✓</span> Same-Day Reports</div>
+      <div class="trust-item"><span class="trust-icon">✓</span> Fast Reports</div>
       <div class="trust-item"><span class="trust-icon">✓</span> InterNACHI Certified Standards</div>
       <div class="trust-item"><span class="trust-icon">✓</span> Residential &amp; Commercial</div>
     </div>
@@ -1536,43 +1620,43 @@
         <article class="service-card fade-up">
           <div class="service-icon">🏠</div>
           <h3>Buyer's Home Inspection</h3>
-          <p>A comprehensive evaluation of the home's structure, systems, and components before you close. Know exactly what you're buying — roof to foundation.</p>
-          <a href="#contact" class="service-link">Learn More <span>→</span></a>
+          <p>A comprehensive evaluation of the home's structure, systems, and components before you close. Know exactly what you're buying, from roof to foundation.</p>
+          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
         <article class="service-card fade-up">
           <div class="service-icon">📋</div>
           <h3>Pre-Listing Inspection</h3>
           <p>Identify and address issues before your home goes to market. Avoid last-minute surprises that derail deals and reduce your negotiating power as a seller.</p>
-          <a href="#contact" class="service-link">Learn More <span>→</span></a>
+          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
         <article class="service-card fade-up">
           <div class="service-icon">🏢</div>
           <h3>Commercial Property Inspection</h3>
           <p>Detailed commercial inspections for retail, office, and mixed-use properties. Essential due diligence for buyers, lenders, and investors.</p>
-          <a href="#contact" class="service-link">Learn More <span>→</span></a>
+          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
         <article class="service-card fade-up">
           <div class="service-icon">📈</div>
           <h3>Investor Retainer Program</h3>
           <p>Ongoing inspection services for real estate investors managing portfolios. Priority scheduling, consistent reporting format, and volume pricing.</p>
-          <a href="#contact" class="service-link">Learn More <span>→</span></a>
+          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
         <article class="service-card fade-up">
           <div class="service-icon">🔥</div>
           <h3>Thermal Imaging</h3>
           <p>Advanced infrared camera inspection detects moisture intrusion, electrical hot spots, insulation gaps, and hidden issues invisible to the naked eye.</p>
-          <a href="#contact" class="service-link">Learn More <span>→</span></a>
+          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
         <article class="service-card fade-up">
           <div class="service-icon">🏊</div>
           <h3>Pool &amp; Spa Inspection</h3>
           <p>Dedicated pool and spa inspection covering equipment, plumbing, decking, safety features, and mechanical systems. Especially important for Coachella Valley properties.</p>
-          <a href="#contact" class="service-link">Learn More <span>→</span></a>
+          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
       </div>
@@ -1590,7 +1674,7 @@
         <div class="process-step fade-up">
           <div class="step-num">1</div>
           <h3>Book Online</h3>
-          <p>Schedule online through our booking calendar. Pick a time that works for you — we accommodate short escrow windows.</p>
+          <p>Schedule online through our booking calendar. Pick a time that works for you. We accommodate short escrow windows.</p>
         </div>
         <div class="process-step fade-up">
           <div class="step-num">2</div>
@@ -1599,8 +1683,8 @@
         </div>
         <div class="process-step fade-up">
           <div class="step-num">3</div>
-          <h3>Same-Day Report</h3>
-          <p>Detailed digital report with photos delivered within hours. Clear, plain-language findings organized by priority.</p>
+          <h3>Fast Report</h3>
+          <p>Detailed digital report with photos, delivered fast. Clear, plain-language findings organized by priority.</p>
         </div>
         <div class="process-step fade-up">
           <div class="step-num">4</div>
@@ -1618,7 +1702,7 @@
         <div class="about-visual">
           <div class="about-portrait-wrap">
             <div class="about-portrait-ring">
-              <img src="CJB.jpg" alt="CJ Bourne, Licensed Home Inspector — Bourne Inspections" class="about-portrait-img" />
+              <img src="CJB.jpg" alt="CJ Bourne, Licensed Home Inspector at Bourne Inspections" class="about-portrait-img" loading="lazy" decoding="async" />
             </div>
             <p class="about-portrait-caption">CJ Bourne &nbsp;·&nbsp; InterNACHI Certified Inspector</p>
             <div class="about-accent">
@@ -1630,8 +1714,8 @@
         <div class="about-content fade-up">
           <div class="section-label">About</div>
           <h2>An Inspector Who Takes It Personally</h2>
-          <p>When you hire Bourne Inspections, you get one dedicated inspector — not a rotating crew. Every inspection is approached with the same standard: thorough, honest, and explained in plain language.</p>
-          <p>We serve buyers, sellers, and investors across Palm Springs and the entire Coachella Valley. Our knowledge of desert construction — from mid-century modern to new construction — means we know what to look for in this specific climate and environment.</p>
+          <p>When you hire Bourne Inspections, you get one dedicated inspector, not a rotating crew. Every inspection is approached with the same standard: thorough, honest, and explained in plain language.</p>
+          <p>We serve buyers, sellers, and investors across Palm Springs and the entire Coachella Valley. Our knowledge of desert construction, from mid-century modern to new construction, means we know what to look for in this specific climate and environment.</p>
           <p>We also provide specialized services for real estate investors, including retainer programs with priority scheduling and consistent reporting formats that integrate with your acquisition process.</p>
           <div class="credentials-list">
             <div class="credential-item">
@@ -1675,7 +1759,7 @@
         <div>
           <div class="section-label">For Investors &amp; Commercial Buyers</div>
           <h2>Commercial &amp; Investment Property Services</h2>
-          <p>Real estate investors need a different level of service — predictable, consistent, and built around your acquisition process. Our investor retainer program provides priority access, standardized reporting, and the reliability that portfolio buyers require.</p>
+          <p>Real estate investors need a different level of service: predictable, consistent, and built around your acquisition process. Our investor retainer program provides priority access, standardized reporting, and the reliability that portfolio buyers require.</p>
           <p>We inspect retail, office, mixed-use, and multi-family properties throughout the Coachella Valley. Whether you're conducting due diligence on a single acquisition or running multiple inspections a month, we build around your workflow.</p>
           <a href="#contact" class="btn-primary" style="margin-top: 8px;">Discuss Investor Services</a>
         </div>
@@ -1720,6 +1804,24 @@
       <h2>What Our Clients Say</h2>
       <p class="section-lead">Trusted by buyers, sellers, and investors across the Coachella Valley.</p>
 
+      <div class="testimonials-grid two" style="margin-bottom:32px;">
+        <div class="testimonial-card fade-up">
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>&ldquo;My husband and I had our home inspected by Bourne Inspections Inc. They were super professional and&hellip;&rdquo;</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">D</div>
+            <div><div class="author-name">Dawn D.</div><div class="author-location">Google review</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>&ldquo;Bourne Inspections performed a presale inspection on my home. I would highly recommend as the inspection was done very professionally, thoroughly and timely at a reasonable price. I would definitely use them again!&rdquo;</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">H</div>
+            <div><div class="author-name">Home seller</div><div class="author-location">Google review</div></div>
+          </div>
+        </div>
+      </div>
       <div class="google-reviews-callout fade-up">
         <div class="google-reviews-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1746,7 +1848,7 @@
     <div class="container">
       <div class="section-label">Where We Work</div>
       <h2>Service Area: Coachella Valley &amp; High Desert</h2>
-      <p class="section-lead">We inspect properties throughout the Coachella Valley and surrounding high desert communities. Don't see your city? Call us — we likely cover it.</p>
+      <p class="section-lead">We inspect properties throughout the Coachella Valley and surrounding high desert communities. Don't see your city? Call us. We likely cover it.</p>
 
       <div class="area-grid">
         <div class="area-item"><span class="area-dot"></span>Palm Springs</div>
@@ -1783,7 +1885,7 @@
             <span class="faq-question-text">How long does a home inspection take?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">A standard home inspection typically takes 2–4 hours depending on the size and age of the property. Larger homes, pools, and additional structures add time. Commercial properties vary. We never rush — thoroughness is the standard, not the exception.</div>
+          <div class="faq-answer">A standard home inspection typically takes 2–4 hours depending on the size and age of the property. Larger homes, pools, and additional structures add time. Commercial properties vary. We never rush. Thoroughness is the standard, not the exception.</div>
         </div>
 
         <div class="faq-item">
@@ -1791,7 +1893,7 @@
             <span class="faq-question-text">When will I receive my inspection report?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">Reports are delivered digitally the same day, typically within a few hours of completing the inspection. The report includes photos, descriptions, and items organized by priority so you can quickly identify what requires immediate attention versus what's routine maintenance.</div>
+          <div class="faq-answer">Reports are delivered digitally and fast, so your escrow stays on schedule. The report includes photos, descriptions, and items organized by priority so you can quickly identify what requires immediate attention versus what's routine maintenance.</div>
         </div>
 
         <div class="faq-item">
@@ -1799,7 +1901,7 @@
             <span class="faq-question-text">Should I be present during the inspection?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">You're always welcome to attend, and we encourage it. Being present allows you to see findings firsthand and ask questions in real time. That said, we understand schedules don't always allow it — the report is designed to be complete and clear on its own, and we're available by phone to walk you through anything.</div>
+          <div class="faq-answer">You're always welcome to attend, and we encourage it. Being present allows you to see findings firsthand and ask questions in real time. That said, we understand schedules don't always allow it. The report is designed to be complete and clear on its own, and we're available by phone to walk you through anything.</div>
         </div>
 
         <div class="faq-item">
@@ -1823,7 +1925,7 @@
             <span class="faq-question-text">What is a pre-listing inspection?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">A pre-listing inspection is done before you put your home on the market. It identifies issues that a buyer's inspector might find, giving you the opportunity to address them on your own terms — and your own timeline. Sellers who complete pre-listing inspections experience fewer surprises, fewer re-negotiations, and faster closings.</div>
+          <div class="faq-answer">A pre-listing inspection is done before you put your home on the market. It identifies issues that a buyer's inspector might find, giving you the opportunity to address them on your own terms and your own timeline. Sellers who complete pre-listing inspections experience fewer surprises, fewer re-negotiations, and faster closings.</div>
         </div>
 
         <div class="faq-item">
@@ -1851,7 +1953,7 @@
     <div class="container">
       <h2>Ready to Schedule Your Inspection?</h2>
       <p>Available 7 days a week across the Coachella Valley. Short escrow windows accommodated.</p>
-      <a href="https://calendly.com/kate-bourne/inspection-consultation?month=2026-05" target="_blank" rel="noopener" class="btn-white">
+      <a href="https://calendly.com/kate-bourne/inspection-consultation" target="_blank" rel="noopener" class="btn-white">
         Book Your Inspection
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
       </a>
@@ -1871,7 +1973,7 @@
           <div class="contact-detail-icon">📞</div>
           <div>
             <div class="contact-detail-label">Phone</div>
-            <div class="contact-detail-value"><a href="tel:+12537661101">(253) 766-1101</a></div>
+            <div class="contact-detail-value"><a href="tel:+17602824764">(760) 282-4764</a></div>
           </div>
         </div>
         <div class="contact-detail">
@@ -1899,11 +2001,11 @@
 
       <!-- Calendly booking button -->
       <div class="booking-cta">
-        <a href="https://calendly.com/kate-bourne/inspection-consultation?month=2026-05" target="_blank" rel="noopener" class="btn-book">
+        <a href="https://calendly.com/kate-bourne/inspection-consultation" target="_blank" rel="noopener" class="btn-book">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           Book Your Inspection Online
         </a>
-        <p class="booking-note">Opens our live availability calendar — pick a date and time that works for you.</p>
+        <p class="booking-note">Opens our live availability calendar. Pick a date and time that works for you.</p>
       </div>
     </div>
   </section>
@@ -1914,7 +2016,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <span class="nav-logo">Bourne <span>Inspections</span></span>
-          <p>Licensed home and commercial property inspections serving Palm Springs and the Coachella Valley. Thorough, honest, and delivered the same day.</p>
+          <p>Licensed home and commercial property inspections serving Palm Springs and the Coachella Valley. Thorough, honest, and delivered fast.</p>
         </div>
         <div class="footer-col">
           <h5>Services</h5>
@@ -1930,12 +2032,12 @@
         <div class="footer-col">
           <h5>Service Area</h5>
           <ul>
-            <li><a href="#">Palm Springs</a></li>
-            <li><a href="#">Palm Desert</a></li>
-            <li><a href="#">Rancho Mirage</a></li>
-            <li><a href="#">Cathedral City</a></li>
-            <li><a href="#">La Quinta</a></li>
-            <li><a href="#">Joshua Tree</a></li>
+            <li><a href="#service-area">Palm Springs</a></li>
+            <li><a href="#service-area">Palm Desert</a></li>
+            <li><a href="#service-area">Rancho Mirage</a></li>
+            <li><a href="#service-area">Cathedral City</a></li>
+            <li><a href="#service-area">La Quinta</a></li>
+            <li><a href="#service-area">Joshua Tree</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1958,7 +2060,7 @@
 
   <!-- ===================== MOBILE CTA BAR ===================== -->
   <div class="mobile-cta-bar">
-    <a href="tel:+12537661101" class="m-call">
+    <a href="tel:+17602824764" class="m-call">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 4.9 19.79 19.79 0 0 1 1.27 4.18 2 2 0 0 1 1.18 2H4a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L5.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 19 16.92z"/></svg>
       Call Now
     </a>
@@ -2015,6 +2117,7 @@
         const isOpen = item.classList.contains('open');
         document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
         if (!isOpen) item.classList.add('open');
+        document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', String(b.closest('.faq-item').classList.contains('open'))));
       });
     });
 
@@ -2045,6 +2148,21 @@
       }, { threshold: 0.1 });
       contactObserver.observe(contactSection);
     }
+  </script>
+
+  <script>
+    // Click tracking: sends call, booking and email clicks to GA4 or GTM once installed.
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a');
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var evt = href.indexOf('tel:') === 0 ? 'call_click'
+        : href.indexOf('calendly.com') > -1 ? 'booking_click'
+        : href.indexOf('mailto:') === 0 ? 'email_click' : null;
+      if (!evt) return;
+      if (typeof gtag === 'function') gtag('event', evt, { link_url: href });
+      if (window.dataLayer) window.dataLayer.push({ event: evt, link_url: href });
+    });
   </script>
 
 </body>
