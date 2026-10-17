@@ -420,6 +420,24 @@
 
     /* Hero stats panel */
 
+
+    /* ----- Full-width photo hero ----- */
+    body section.hero { background: linear-gradient(90deg, rgba(7,19,43,0.88) 0%, rgba(7,19,43,0.72) 42%, rgba(7,19,43,0.25) 100%), url('hero-home.jpg') center 40% / cover no-repeat; min-height: 560px; display: flex; flex-direction: column; justify-content: center; }
+    body section.hero::before, body section.hero::after { display: none; }
+    body section.hero .hero-inner { grid-template-columns: minmax(0, 800px); justify-content: start; width: 100%; }
+    body section.hero h1 { color: #FFFFFF; }
+    body section.hero h1 em { color: #8DB4FF; }
+    body section.hero .hero-eyebrow { color: #BCD3FF; }
+    body section.hero .hero-eyebrow::before { background: #BCD3FF; }
+    body section.hero .hero-sub { color: rgba(255,255,255,0.9); }
+    body section.hero .btn-secondary { color: #FFFFFF; border-color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.06); }
+    body section.hero .btn-secondary:hover { background: rgba(255,255,255,0.18); border-color: #FFFFFF; }
+    body section.hero .hero-strip { border-top-color: rgba(255,255,255,0.25); width: 100%; }
+    body section.hero .stat-number { color: #8DB4FF; }
+    body section.hero .stat-grid-row .stat-label { color: rgba(255,255,255,0.8); }
+    @media (max-width: 900px) {
+      body section.hero { background: linear-gradient(180deg, rgba(7,19,43,0.82) 0%, rgba(7,19,43,0.7) 100%), url('hero-home.jpg') center / cover no-repeat; min-height: 0; }
+    }
     .hero-photo { position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.35); max-width: 520px; justify-self: end; width: 100%; }
     .hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
     .hero-photo-badge { position: absolute; left: 14px; right: 14px; bottom: 14px; background: rgba(255,255,255,0.95); color: #1B2B45; border-radius: 8px; padding: 12px 14px; font-size: 0.85rem; line-height: 1.35; }
@@ -1609,10 +1627,6 @@
         </div>
       </div>
 
-      <div class="hero-photo">
-        <img src="hero-home.jpg" width="893" height="646" alt="Modern Palm Springs home with glass walls and a pool" fetchpriority="high">
-        <div class="hero-photo-badge"><strong>Palm Springs and the Coachella Valley</strong> Home and commercial inspections</div>
-      </div>
     </div>
     <div class="hero-strip">
       <div class="stat-grid stat-grid-row">
