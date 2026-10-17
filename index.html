@@ -224,7 +224,9 @@
       align-items: center;
     }
 
-    @media (min-width: 901px) and (max-width: 1260px) { .nav-phone { display: none; } .nav-links a[href="#commercial"], .nav-links a[href="#service-area"] { display: none; } }
+    @media (min-width: 901px) and (max-width: 1599px) { .nav-phone { display: none !important; } .nav-links a[href="#about"], .nav-links a[href="#service-area"] { display: none; } }
+    @media (min-width: 901px) and (max-width: 1040px) { .nav-links a:not(.nav-cta) { display: none; } .nav-links { gap: 10px; } }
+    @media (min-width: 901px) and (max-width: 1260px) { .nav-phone { display: none; } .nav-links a[href="#commercial"], .nav-links a[href="#service-area"], .nav-links a[href="#about"] { display: none; } }
     .nav-links a {
       font-size: 0.72rem;
       font-weight: 500;
@@ -247,6 +249,9 @@
     }
 
     .nav-cta:hover { background: var(--rust-lt) !important; }
+    .nav-links a.nav-cta-quote { background: transparent !important; border: 1.5px solid var(--rust-lt, #5b8def); color: #fff !important; padding: 6.5px 16px; }
+    .nav-links a.nav-cta-quote:hover { background: var(--rust) !important; }
+    .nav-links.open .nav-cta + .nav-cta, .nav-links.open .nav-cta-quote + .nav-cta { margin-top: 12px; }
 
     .nav-phone {
       display: inline-flex;
@@ -1596,7 +1601,8 @@
         <a href="#about">About</a>
         <a href="#service-area">Service Area</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact" class="nav-cta">Request a Quote</a>
+        <a href="#contact" class="nav-cta nav-cta-quote">Get a Commercial Quote</a>
+        <a href="https://calendar.app.google/BgJctb2vZKWjApAU6" target="_blank" rel="noopener" class="nav-cta">Book Your Inspection</a>
       </div>
       <a href="tel:+17602824764" class="nav-phone">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 4.9 19.79 19.79 0 0 1 1.27 4.18 2 2 0 0 1 1.18 2H4a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L5.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 19 16.92z"/></svg>
@@ -1617,7 +1623,7 @@
         <p class="hero-sub">Commercial due diligence and home inspections for the Coachella Valley. Thorough inspections. Fast reports. No surprises.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn-primary">Request a Commercial Quote</a>
-          <a href="https://calendar.app.google/BgJctb2vZKWjApAU6" target="_blank" rel="noopener" class="btn-secondary">Book a Home Inspection</a>
+          <a href="https://calendar.app.google/BgJctb2vZKWjApAU6" target="_blank" rel="noopener" class="btn-secondary">Book Your Inspection</a>
         </div>
       </div>
 
