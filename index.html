@@ -198,7 +198,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 1100px;
+      max-width: 1240px;
+      gap: 16px;
       margin: 0 auto;
       padding: 0 24px;
       height: 64px;
@@ -219,15 +220,16 @@
 
     .nav-links {
       display: flex;
-      gap: 20px;
+      gap: 14px;
       align-items: center;
     }
 
+    @media (min-width: 901px) and (max-width: 1260px) { .nav-phone { display: none; } .nav-links a[href="#commercial"], .nav-links a[href="#service-area"] { display: none; } }
     .nav-links a {
       font-size: 0.72rem;
       font-weight: 500;
       color: #7A9CC8;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       transition: color 0.2s;
       white-space: nowrap;
@@ -442,6 +444,17 @@
     .cj-band h2 { margin: 6px 0 12px; }
     .cj-band p { max-width: 560px; margin-bottom: 20px; }
     @media (max-width: 768px) { .cj-band { padding: 40px 16px; } .cj-band-inner { grid-template-columns: 1fr; gap: 24px; } .cj-band img { max-width: 320px; margin: 0 auto; } }
+
+    /* ===================== PRICING ===================== */
+    .price-wrap { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: start; margin-top: 8px; }
+    .price-card { background: #FFFFFF; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .price-card h3 { margin: 0; padding: 14px 20px; background: #0F3F8F; color: #fff; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .price-row { display: flex; justify-content: space-between; gap: 16px; padding: 12px 20px; border-top: 1px solid var(--border); font-variant-numeric: tabular-nums; }
+    .price-row:first-of-type { border-top: 0; }
+    .price-row strong { white-space: nowrap; }
+    .price-start { display: inline-block; background: #D6E3F4; color: #0F3F8F; font-weight: 700; padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; letter-spacing: 0.04em; }
+    .price-note { font-size: 0.88rem; color: #4A6488; margin-top: 14px; }
+    @media (max-width: 800px) { .price-wrap { grid-template-columns: minmax(0, 1fr); } }
     .hero-stats {
       background: #FFFFFF;
       border: 1px solid var(--border);
@@ -1560,6 +1573,7 @@
       <a href="#" class="nav-logo">Bourne <span>Inspections</span></a>
       <div class="nav-links" id="nav-links">
         <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
         <a href="#about">About</a>
         <a href="#commercial">Commercial</a>
         <a href="#service-area">Service Area</a>
@@ -1704,6 +1718,24 @@
   </section>
 
   <!-- ===================== PROCESS ===================== -->
+  <!-- ===================== PRICING ===================== -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-label">Pricing</div>
+      <h2>Clear Pricing, No Surprises</h2>
+      <span class="price-start">Home inspections starting at $300</span>
+      <p class="section-lead">Residential pricing is set by the size of the home. Add-ons are priced separately, so you only pay for what your property needs.</p>
+      <div class="price-wrap">
+        <div class="price-card"><h3>Home inspection by size</h3><div class="price-row"><span>Up to 1,000 sq ft (condos, small units)</span><strong>$300</strong></div><div class="price-row"><span>1,001 to 1,500 sq ft</span><strong>$350</strong></div><div class="price-row"><span>1,501 to 2,000 sq ft</span><strong>$400</strong></div><div class="price-row"><span>2,001 to 2,500 sq ft</span><strong>$450</strong></div><div class="price-row"><span>2,501 to 3,000 sq ft</span><strong>$500</strong></div><div class="price-row"><span>3,001 to 4,000 sq ft</span><strong>$575</strong></div><div class="price-row"><span>4,001 to 5,000 sq ft</span><strong>$675</strong></div><div class="price-row"><span>Over 5,000 sq ft</span><strong>Quote</strong></div></div>
+        <div>
+          <div class="price-card"><h3>Add-ons</h3><div class="price-row"><span>Pool and spa</span><strong>$100</strong></div><div class="price-row"><span>Sewer scope</span><strong>$225</strong></div><div class="price-row"><span>Thermal imaging</span><strong>$100</strong></div><div class="price-row"><span>Guest house or ADU</span><strong>$125</strong></div><div class="price-row"><span>Built before 1970</span><strong>$50</strong></div></div>
+          <p class="price-note">Commercial inspections are quoted by property type and size. Call (760) 282-4764 or book a walkthrough. Inspections are paid at booking. We accept credit card (a card processing fee applies), Venmo, cash, or cashier's check.</p>
+          <p style="margin-top:16px"><a href="https://calendar.app.google/BgJctb2vZKWjApAU6" target="_blank" rel="noopener" class="btn-primary">Book Your Inspection</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="process" style="background: var(--sand);">
     <div class="container">
       <div class="section-label">How It Works</div>
