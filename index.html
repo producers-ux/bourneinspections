@@ -416,6 +416,20 @@
     .btn-secondary:hover { border-color: var(--sand); background: rgba(174,204,255,0.07); }
 
     /* Hero stats panel */
+
+    .hero-photo { position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.35); max-width: 440px; justify-self: end; width: 100%; }
+    .hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+    .hero-photo-badge { position: absolute; left: 14px; right: 14px; bottom: 14px; background: rgba(255,255,255,0.95); color: #1B2B45; border-radius: 8px; padding: 12px 14px; font-size: 0.85rem; line-height: 1.35; }
+    .hero-photo-badge strong { display: block; font-size: 0.95rem; }
+    .hero-strip { position: relative; max-width: 1100px; margin: 48px auto 0; padding-top: 28px; border-top: 1px solid var(--border); }
+    .stat-grid-row { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .stat-grid-row .stat-divider { display: none; }
+    .stat-grid-row .stat-number { font-size: 2.2rem; }
+    .stat-grid-row .stat-label { color: #4A6488; }
+    @media (max-width: 768px) {
+      .hero-photo { justify-self: center; margin-top: 28px; max-width: 360px; }
+      .hero-strip { display: none; }
+    }
     .hero-stats {
       background: #FFFFFF;
       border: 1px solid var(--border);
@@ -1567,8 +1581,13 @@
         </div>
       </div>
 
-      <div class="hero-stats">
-        <div class="stat-grid">
+      <div class="hero-photo">
+        <img src="cj-hero.jpg" width="880" height="1100" alt="CJ Bourne of Bourne Inspections in protective gear, ready to inspect a Palm Springs crawlspace" fetchpriority="high">
+        <div class="hero-photo-badge"><strong>Licensed &amp; Insured</strong> Fast, detailed reports for every inspection</div>
+      </div>
+    </div>
+    <div class="hero-strip">
+      <div class="stat-grid stat-grid-row">
           <div class="stat-item">
             <div class="stat-number">500+</div>
             <div class="stat-label">Inspections Completed</div>
@@ -1587,14 +1606,6 @@
             <div class="stat-label">Cities Served</div>
           </div>
         </div>
-        <div class="hero-badge">
-          <div class="hero-badge-icon">✓</div>
-          <div class="hero-badge-text">
-            <strong>Fast report delivery</strong>
-            Detailed digital report with photos, delivered fast so your deal keeps moving
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -1623,42 +1634,42 @@
           <div class="service-icon">🏠</div>
           <h3>Buyer's Home Inspection</h3>
           <p>A comprehensive evaluation of the home's structure, systems, and components before you close. Know exactly what you're buying, from roof to foundation.</p>
-          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
+          <a href="https://calendar.app.google/BgJctb2vZKWjApAU6" target="_blank" rel="noopener" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
         <article class="service-card fade-up">
           <div class="service-icon">📋</div>
           <h3>Pre-Listing Inspection</h3>
           <p>Identify and address issues before your home goes to market. Avoid last-minute surprises that derail deals and reduce your negotiating power as a seller.</p>
-          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
+          <a href="https://calendar.app.google/BgJctb2vZKWjApAU6" target="_blank" rel="noopener" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
         <article class="service-card fade-up">
           <div class="service-icon">🏢</div>
           <h3>Commercial Property Inspection</h3>
           <p>Detailed commercial inspections for retail, office, and mixed-use properties. Essential due diligence for buyers, lenders, and investors.</p>
-          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
+          <a href="https://calendar.app.google/BgJctb2vZKWjApAU6" target="_blank" rel="noopener" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
         <article class="service-card fade-up">
           <div class="service-icon">📈</div>
           <h3>Investor Retainer Program</h3>
           <p>Ongoing inspection services for real estate investors managing portfolios. Priority scheduling, consistent reporting format, and volume pricing.</p>
-          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
+          <a href="https://calendar.app.google/BgJctb2vZKWjApAU6" target="_blank" rel="noopener" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
         <article class="service-card fade-up">
           <div class="service-icon">🔥</div>
           <h3>Thermal Imaging</h3>
           <p>Advanced infrared camera inspection detects moisture intrusion, electrical hot spots, insulation gaps, and hidden issues invisible to the naked eye.</p>
-          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
+          <a href="https://calendar.app.google/BgJctb2vZKWjApAU6" target="_blank" rel="noopener" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
         <article class="service-card fade-up">
           <div class="service-icon">🏊</div>
           <h3>Pool &amp; Spa Inspection</h3>
           <p>Dedicated pool and spa inspection covering equipment, plumbing, decking, safety features, and mechanical systems. Especially important for Coachella Valley properties.</p>
-          <a href="#contact" class="service-link">Book This Inspection <span>→</span></a>
+          <a href="https://calendar.app.google/BgJctb2vZKWjApAU6" target="_blank" rel="noopener" class="service-link">Book This Inspection <span>→</span></a>
         </article>
 
       </div>
@@ -2007,7 +2018,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           Book Your Inspection Online
         </a>
-        <p class="booking-note">Opens our live availability calendar. Pick a date and time that works for you.</p>
+        <p class="booking-note">Pick a date and time that works for you. Inspections are paid at booking, and CJ will send your invoice right after you book.</p>
       </div>
 
       <!-- Quote / request form (Klaviyo) -->
@@ -2073,7 +2084,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 4.9 19.79 19.79 0 0 1 1.27 4.18 2 2 0 0 1 1.18 2H4a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L5.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 19 16.92z"/></svg>
       Call Now
     </a>
-    <a href="#contact" class="m-book">
+    <a href="https://calendar.app.google/BgJctb2vZKWjApAU6" target="_blank" rel="noopener" class="m-book">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       Book Inspection
     </a>
