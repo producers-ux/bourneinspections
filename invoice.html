@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Invoice | Bourne Inspections</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#08152E;--slate:#1A3260;--blue:#1A56C4;--blue-lt:#2E6FE0;--sand:#EEF3FC;--line:#D5DEEE;--muted:#566784;--white:#fff;--good:#17794a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--sand);color:var(--navy);font-family:'Barlow','Segoe UI',system-ui,sans-serif;font-size:16px;line-height:1.45;
+    padding:24px max(16px,env(safe-area-inset-right,0px)) 48px max(16px,env(safe-area-inset-left,0px))}
+  .sheet{max-width:640px;margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  header{background:var(--navy);color:var(--white);padding:20px 24px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+  .brand{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:700;font-size:28px;letter-spacing:.05em;text-transform:uppercase}
+  .brand span{color:#7fa6f5}
+  .no{font-size:14px;opacity:.85;text-align:right}
+  main{padding:24px;display:flex;flex-direction:column;gap:22px}
+  h2{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-size:18px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+  dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 16px}
+  dt{color:var(--muted)} dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+  .lines{display:flex;flex-direction:column}
+  .lines div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+  .lines .total{font-size:20px;font-weight:700}
+  .lines .total span:last-child{color:var(--blue)}
+  .pay{display:flex;flex-direction:column;gap:10px}
+  .btn{display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:8px;background:var(--blue);color:var(--white);font-weight:700;text-decoration:none;border:1px solid var(--blue);padding:0 16px;font:inherit;font-weight:700;cursor:pointer;text-align:center}
+  .btn.alt{background:var(--white);color:var(--blue)}
+  .btn:hover{background:var(--blue-lt);color:var(--white)}
+  .note{font-size:14px;color:var(--muted)}
+  .box{background:var(--sand);border-radius:8px;padding:12px 14px;font-size:15px}
+  ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-size:15px}
+  footer{padding:16px 24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--blue)}
+  .none{padding:32px 24px;text-align:center}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--blue-lt);outline-offset:2px}
+  @media print{body{background:#fff;padding:0}.sheet{border:0}.noprint{display:none!important}header{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<div class="sheet" id="sheet">
+  <header>
+    <div class="brand">Bourne <span>Inspections</span></div>
+    <div class="no" id="inv-no"></div>
+  </header>
+  <main id="main" hidden>
+    <section>
+      <h2>Service</h2>
+      <dl id="details"></dl>
+    </section>
+    <section>
+      <h2>Amount</h2>
+      <div class="lines" id="lines"></div>
+    </section>
+    <section class="pay noprint" id="pay">
+      <h2>Pay</h2>
+      <div class="box">Payment is due at booking. Choose any option below.</div>
+      <a class="btn" id="card" hidden target="_blank" rel="noopener">Pay by card</a>
+      <a class="btn alt" id="venmo" target="_blank" rel="noopener">Pay with Venmo @CJ-Bourne</a>
+      <div class="note" id="cardnote" hidden></div>
+      <div class="box">Cash or cashier's check: bring it to the appointment and make checks payable to Bourne Inspections.</div>
+      <div class="note">Card payments open on Square's secure page. We never see or store your card number.</div>
+    </section>
+    <section>
+      <h2>Terms</h2>
+      <ul>
+        <li>Payment is due at booking, before the appointment.</li>
+        <li>We accept credit card, Venmo, cash, and cashier's check. Card payments include a processing fee, shown above.</li>
+        <li>This invoice covers the service and location listed above.</li>
+        <li>To reschedule or cancel, contact CJ as early as you can at (760) 282-4764 or cj@bourneinspections.com.</li>
+        <li>Your report is delivered fast after the inspection.</li>
+      </ul>
+    </section>
+    <button class="btn alt noprint" type="button" id="print">Print or save as PDF</button>
+  </main>
+  <div class="none" id="none" hidden>
+    <h2>No invoice found</h2>
+    <p>This link is missing its invoice details. Please ask CJ to send it again.</p>
+  </div>
+  <footer>
+    <span>Bourne Inspections, Palm Springs, CA</span>
+    <span><a href="tel:+17602824764">(760) 282-4764</a> | <a href="mailto:cj@bourneinspections.com">cj@bourneinspections.com</a></span>
+  </footer>
+</div>
+<script>
+(function(){
+  function $(i){return document.getElementById(i)}
+  function money(n){n=Number(n)||0;return '$'+n.toLocaleString('en-US',{minimumFractionDigits:(n%1?2:0),maximumFractionDigits:2})}
+  function decode(h){
+    try{
+      h=h.replace(/^#/,'').replace(/-/g,'+').replace(/_/g,'/');
+      while(h.length%4)h+='=';
+      return JSON.parse(decodeURIComponent(escape(atob(h))));
+    }catch(e){return null}
+  }
+  var d=decode(location.hash||'');
+  if(!d||typeof d!=='object'||!d.s){$('none').hidden=false;return}
+  $('main').hidden=false;
+  $('inv-no').textContent=d.no?('Invoice '+d.no):'Invoice';
+  function row(dl,k,v){if(!v)return;var a=document.createElement('dt');a.textContent=k;var b=document.createElement('dd');b.textContent=String(v).slice(0,300);dl.appendChild(a);dl.appendChild(b)}
+  var dl=$('details');
+  row(dl,'Client',d.n);row(dl,'Service',d.s);row(dl,'Location',d.l);row(dl,'Address',d.a);row(dl,'Date',d.d);row(dl,'Time',d.t);row(dl,'Topic',d.p);
+  var L=$('lines');
+  function line(k,v,cls){var r=document.createElement('div');if(cls)r.className=cls;var a=document.createElement('span');a.textContent=k;var b=document.createElement('span');b.textContent=v;r.appendChild(a);r.appendChild(b);L.appendChild(r)}
+  var sub=Number(d.sub)||0, cf=Number(d.cf)||0;
+  if(d.base!==undefined)line(d.s,money(d.base));
+  (Array.isArray(d.ad)?d.ad:[]).slice(0,10).forEach(function(x){if(Array.isArray(x))line(String(x[0]).slice(0,60),money(x[1]))});
+  line('Total due (cash, Venmo, or check)',money(sub),'total');
+  if(cf>0)line('Total by card (adds a '+money(cf)+' processing fee)',money(sub+cf));
+  var sq=d.sq||'';
+  if(/^https:\/\/(squareup\.com|square\.link|checkout\.square\.site|[a-z0-9-]+\.square\.site)\//i.test(sq)){var c=$('card');c.href=sq;c.hidden=false;c.textContent='Pay by card'+(cf>0?' ('+money(sub+cf)+')':'');var n=$('cardnote');n.hidden=false;n.textContent=cf>0?'The card total includes the processing fee.':'A processing fee may be added on the next page.'}
+  var note='Bourne Inspections '+(d.no||'invoice');
+  $('venmo').href='https://venmo.com/CJ-Bourne?txn=pay&audience=private&amount='+encodeURIComponent(sub)+'&note='+encodeURIComponent(note);
+  $('print').addEventListener('click',function(){window.print()});
+  document.title='Invoice '+(d.no||'')+' | Bourne Inspections';
+})();
+</script>
+</body>
+</html>
